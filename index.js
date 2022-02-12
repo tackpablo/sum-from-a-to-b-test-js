@@ -1,6 +1,12 @@
-
 function sum(fromN, toN) {
-  // Sum all the values from fromN up to toN
+  // if start and end are equal
+  if (fromN === toN) {
+    // return the end value
+    return toN;
+  } else {
+    // otherwise return start + the sum(start++, end)
+    return fromN + sum(fromN + 1, toN);
+  }
 }
 
 module.exports = sum;
